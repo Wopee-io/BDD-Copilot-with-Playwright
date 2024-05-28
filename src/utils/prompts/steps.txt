@@ -1,0 +1,17 @@
+I'm a test engineer writing tests in Playwright using Typescript.
+I've opened a web page and I want to thoroughly follow the instructions: {{ action }}.
+
+Use realistic test data (consider defined and typical validations) and locators from this HTML:
+```html
+{{ html }}
+```
+
+Generate a sequence of actions, represented in JSON format, ensuring each step aligns with the instructions given. 
+Pay close attention to situations where action is unnecessary, such as attempting to perform an action that's 
+already achieved or navigating to a page you're already on.
+```json
+[
+    { "step": 1, "locator": "#query", "value": "iPhone", "action": "fill" },
+    { "step": 2, "locator": "#search", "value": "", "action": "click" }
+]
+```

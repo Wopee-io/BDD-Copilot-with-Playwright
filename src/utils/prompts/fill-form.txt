@@ -1,0 +1,15 @@
+I'm a test engineer writing tests in Playwright using Typescript.
+I've opened a web page and I want to fill in and submit (click on a button as a last step) the form on this page.
+Use realistic test data (consider defined and typical validations) and locators from this HTML:
+
+```html
+{{ html }}
+```
+
+Provide me with steps to accomplish it in JSON format. Example:
+```json
+[
+    { "step": 1, "locator": "#name", "value": "Marcel", "action": "fill" },
+    { "step": 2, "locator": "#pswd", "value": "abc123", "action": "fill" }
+]
+```

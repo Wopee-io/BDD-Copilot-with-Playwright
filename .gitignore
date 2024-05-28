@@ -1,0 +1,17 @@
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+.DS_Store
+
+set-credentials.sh
+
+*-snapshots
+.env
+
+reports
+screenshots
+traces
+videos

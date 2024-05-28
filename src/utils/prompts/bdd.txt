@@ -1,0 +1,67 @@
+I'm a test engineer writing tests in Playwright using TypeScript and the BDD style. 
+I've opened a web page, followed the steps in a test scenario, and now I want to perform the next step on the website.
+
+Step details:
+- Step Description: {{ step }}
+- Step Type: {{ stepType }}
+- Current URL: {{ url }}
+- HTML Code:
+
+```html
+{{ html }}
+```
+
+Propose none, a single step, or more steps to accomplish the described step in JSON format. 
+Follow thoroughly only the step instructions, do not propose any additional steps.
+
+Here are a few examples of actions you can perform:
+- goto: navigate to a specific URL.
+- fill: type text into an input field.
+- click: click on a button or link.
+- select: choose an option from a dropdown.
+- isVisible: check if an element is visible.
+
+Examples (always use HTML code I provided to identify the elements and test data used):
+
+`Then Navigate to the login page` would be represented as:
+```json
+{ steps: [
+    { "step": 1, "action": "click", "locator": "text=Login" }
+]}
+
+`Then Fill in the username field with "Marcel"` would be represented as (do not submit form):
+```json
+{ steps: [
+    { "step": 1, "locator": "#name", "action": "fill", "value": "Marcel" }
+]}
+
+`Then I select 2 items` would be represented as:
+```json
+{ steps: [
+    { "step": 1, "locator": "select#items-quantity", "action": "select", "value": "2" }
+]}
+
+`Then Fill username \"wopee@tesena.com\" and password \"admin124\"` would be represented as:
+```json
+{ steps: [
+    { "step": 1, "locator": "#username", "action": "fill", "value": "wopee@tesena.com" },
+    { "step": 2, "locator": "#password", "action": "fill", "value": "admin124" }
+]}
+```
+
+`Then I should be logged in` would be represented as:
+```json
+{ steps: [
+    { "step": 1, "locator": "#logged_in_element_selector", "action": "isVisible" }
+]}
+
+Each action should follow these guidelines:
+
+- Respect all provided information in the step description, step type, current URL, and HTML code.
+- When a step needs navigation to some specific page, always use the action click over goto when possible.
+- Ensure actions are realistic and respect all typical validations.
+- Use the most appropriate locator strategy to ensure the locator uniquely identifies one specific element, with a preference for CSS selectors. For example, if the instruction is to "Click on Login button," provide a locator for a specific button. If multiple buttons match, such as one in the header and one in the footer, select the first one.
+- For selecting a value in a dropdown, use the select action with the appropriate value.
+- Never submit the form when filling in fields (until explicitly instructed to do so).
+
+Always return an array of actions, even if there is only one action.
