@@ -222,3 +222,9 @@ Remember:
 - [Getting Started with Playwright Visual Testing](https://wopee.io/blog/getting-started-with-playwright-visual-testing)
 - [Playwright Testing on Autopilot](https://youtu.be/GGNPv-6stCU?si=PpaSHTQf_i2Mpqzw)
 - [Wopee.io](https://wopee.io) - Autonomous Testing Platform
+
+## What's next?
+
+- Try Wopee.io https://cmd.wopee.io/
+- Connect with me https://www.linkedin.com/in/marcelveselka/
+- Do you need to boost your skills or test automation practice? 🤩 Let's talk: https://wopee.io/marcel
