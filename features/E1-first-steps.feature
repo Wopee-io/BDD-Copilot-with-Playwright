@@ -1,3 +1,5 @@
+# https://github.com/Wopee-io/BDD-Copilot-with-Playwright?tab=readme-ov-file#1-first-steps-with-bdd-in-playwright
+
 Feature: Login to the application
     Background:
         Given I am on the Home page

@@ -1,4 +1,6 @@
-# Here are a few more exmaples and ideas to play with the idea of BDD Copilot
+# https://github.com/Wopee-io/BDD-Copilot-with-Playwright?tab=readme-ov-file#4-llm-driven-code-generation
+
+# Here are a few more examples to play with the idea of BDD Copilot
 # 
 # Remember: 
 # 

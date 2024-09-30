@@ -1,3 +1,5 @@
+# https://github.com/Wopee-io/BDD-Copilot-with-Playwright?tab=readme-ov-file#4-llm-driven-code-generation
+
 Feature: Login to the application
 
     Background:
