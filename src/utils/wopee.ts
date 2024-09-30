@@ -1,13 +1,12 @@
+require("dotenv").config();
+
 import { Page, expect } from "@playwright/test";
 
 import OpenAI from "openai";
 import * as fs from "fs";
 
-require("dotenv").config();
-
-// Defaults
-// https://platform.openai.com/docs/models/continuous-model-upgrades
-const model = process.env["OPENAI_MODEL"] || "gpt-3.5-turbo";
+// Defaults: https://platform.openai.com/docs/models/
+const model = process.env.OPENAI_MODEL || "gpt-4o";
 console.log("Model:", model);
 
 export class WopeeCopilot {
@@ -15,7 +14,7 @@ export class WopeeCopilot {
   private page: Page;
 
   constructor(page: Page) {
-    this.openai = new OpenAI({ apiKey: process.env["OPENAI_API_KEY"] });
+    this.openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     this.page = page;
   }
 

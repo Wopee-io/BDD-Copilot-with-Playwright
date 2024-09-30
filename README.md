@@ -55,12 +55,20 @@ See `.env.example` file and set the following variables: `OPENAI_API_KEY` and (o
   });
   ```
 
+Run tests from NPM Scripts extension or from the terminal:
+
+```bash
+npm run test:E1
+# or
+npm run test:E1wVideo
+```
+
 ### 2. Prompting & OpenAI REST API
 
 #### 2.1. Prompting
 
-Explore [Vercel AI SDK](https://sdk.vercel.ai/) to interact with LLM models.
-Alternatively, you can use [HuggingChat](https://huggingface.co/chat/) to interact with LLM models.
+Explore [Vercel AI SDK](https://sdk.vercel.ai/playground){:target="\_blank"} to interact with LLM models.
+Alternatively, you can use [HuggingChat](https://huggingface.co/chat/){:target="\_blank"} to interact with LLM models.
 
 1. Try the following prompt:
 
@@ -88,9 +96,9 @@ _Note: We will use OpenAI Chat API for very basic use cases. You are welcome for
 
 ### 3. LLM-Driven Test Design
 
-Use [examples from chatGPT](https://chatgpt.com/share/ce4a398e-b15d-47e1-a2c3-b90f8ad7bcd6) and use them for further experiments.
+Use [examples from chatGPT](https://chatgpt.com/share/ce4a398e-b15d-47e1-a2c3-b90f8ad7bcd6){:target="\_blank"} and use them for further experiments.
 
-Generate test scenarios for a given feature file (by using [Vercel AI SDK](https://sdk.vercel.ai/)), e.g. Login feature, Registration feature, Checkout feature, Create new order, etc. Improve the following prompt:
+Generate test scenarios for a given feature file (by using [Vercel AI SDK](https://sdk.vercel.ai/playground)), e.g. Login feature, Registration feature, Checkout feature, Create new order, etc. Improve the following prompt:
 
 Example 1:
 
@@ -203,6 +211,14 @@ Remember:
 - Context is important, so the more context you provide, the better instructions you will get
 - This approach requires fine-tuning and adjustments to the prompts and step descriptions
 
+Run test from NPM Scripts extension or from the terminal:
+
+```bash
+npm run test:E4
+# or
+npm run test:E4wVideo
+```
+
 ### 5. Opportunities for Improvement (discussion - only if time allows)
 
 - More assert types
@@ -223,8 +239,43 @@ Remember:
 - [Playwright Testing on Autopilot](https://youtu.be/GGNPv-6stCU?si=PpaSHTQf_i2Mpqzw)
 - [Wopee.io](https://wopee.io) - Autonomous Testing Platform
 
+## Useful commands for the terminal
+
+Run tests for specific feature file:
+
+```shell
+npx cucumber-js features/E1-first-steps.feature
+```
+
+Open the trace file:
+
+```shell
+npx playwright show-trace traces/User-signs-in-with-an-invalid-password-2024-05-28-21-06-03-trace.zip
+```
+
+Run default test command:
+
+```shell
+npm test
+```
+
+Run tests for a specific feature file with (or without) video recording:
+
+```shell
+npm run test:E1
+# or
+npm run test:E1wVideo
+# or
+npm run test:E4
+# or
+npm run test:E4wVideo
+```
+
+## Structure of this repository
+
 ## What's next?
 
 - Try Wopee.io https://cmd.wopee.io/
 - Connect with me https://www.linkedin.com/in/marcelveselka/
 - Do you need to boost your skills or test automation practice? 🤩 Let's talk: https://wopee.io/marcel
+- [Free Workshop: Getting Started with Playwright Visual Testing](https://github.com/autonomous-testing/ws-getting-started-w-playwright-visual-testing/)
