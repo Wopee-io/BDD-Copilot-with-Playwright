@@ -67,8 +67,8 @@ npm run test:E1wVideo
 
 #### 2.1. Prompting
 
-Explore [Vercel AI SDK](https://sdk.vercel.ai/playground){:target="\_blank"} to interact with LLM models.
-Alternatively, you can use [HuggingChat](https://huggingface.co/chat/){:target="\_blank"} to interact with LLM models.
+Explore [Vercel AI SDK](https://sdk.vercel.ai/playground) to interact with LLM models.
+Alternatively, you can use [HuggingChat](https://huggingface.co/chat/) to interact with LLM models.
 
 1. Try the following prompt:
 
@@ -96,7 +96,7 @@ _Note: We will use OpenAI Chat API for very basic use cases. You are welcome for
 
 ### 3. LLM-Driven Test Design
 
-Use [examples from chatGPT](https://chatgpt.com/share/ce4a398e-b15d-47e1-a2c3-b90f8ad7bcd6){:target="\_blank"} and use them for further experiments.
+Use [examples from chatGPT](https://chatgpt.com/share/ce4a398e-b15d-47e1-a2c3-b90f8ad7bcd6) and use them for further experiments.
 
 Generate test scenarios for a given feature file (by using [Vercel AI SDK](https://sdk.vercel.ai/playground)), e.g. Login feature, Registration feature, Checkout feature, Create new order, etc. Improve the following prompt:
 
