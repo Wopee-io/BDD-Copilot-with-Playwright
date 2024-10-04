@@ -68,7 +68,9 @@ npm run test:E1wVideo
 #### 2.1. Prompting
 
 Explore [Vercel AI SDK](https://sdk.vercel.ai/playground) to interact with LLM models.
-Alternatively, you can use [HuggingChat](https://huggingface.co/chat/) to interact with LLM models.
+Alternatively, you can use [HuggingChat](https://huggingface.co/chat/) to interact with LLM models or [GitHub Models](https://github.com/marketplace/models)(currently -- Oct 4, 2024 -- to join waiting list).
+
+Other good resources: [Independent analysis of AI models and API providers](https://artificialanalysis.ai/)
 
 1. Try the following prompt:
 
@@ -105,7 +107,7 @@ Example 1:
 ```text
 I am senior QA engineer. I am responsible for testing the `login feature` of the CRM application.
 
-I need to write test scenarios for the login feature. Use Gerkin syntax to write the test scenarios. Use the following test data:
+I need to write test scenarios for the login feature. Use Gherkin syntax to write the test scenarios. Use the following test data:
 - url of the application: `https://example.com`
 - username: `admin`
 - password: `admin123`
@@ -200,7 +202,7 @@ Hints:
 
 - Use `>>` prefix to generate steps on the fly, e.g. `Given >> "I am on the login page"` or `When >> "I enter the username 'admin' and password 'admin123'"`
 - Assertions need to be done in the traditional way (not using AI). More prompt tuning is needed to generate proper assertions.
-- When steps are faining you can try fine-tuning the prompt to generate the proper steps.
+- When steps are failing you can try fine-tuning the prompt to generate the proper steps.
 
 #### 4.3.2. Implementing step? Not needed
 
