@@ -30,16 +30,21 @@ declare global {
 
 setDefaultTimeout(process.env.PWDEBUG ? -1 : 60 * 1000);
 
+console.log("Browser:", process.env.PWHEADLESS);
+
+const isHeadless = process.env.PWHEADLESS === "1" ? true : false;
+const launchOptions = { ...browserOptions, headless: isHeadless };
+
 BeforeAll(async function () {
   switch (process.env.BROWSER) {
     case "firefox":
-      browser = await firefox.launch(browserOptions);
+      browser = await firefox.launch(launchOptions);
       break;
     case "webkit":
-      browser = await webkit.launch(browserOptions);
+      browser = await webkit.launch(launchOptions);
       break;
     default:
-      browser = await chromium.launch(browserOptions);
+      browser = await chromium.launch(launchOptions);
   }
   await ensureDir(tracesDir);
 });

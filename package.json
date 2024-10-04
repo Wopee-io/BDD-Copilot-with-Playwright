@@ -5,9 +5,11 @@
   "scripts": {
     "test": "cucumber-js",
     "snippets": "cucumber-js features/**/*.feature --dry-run --format snippets",
-    "test:E1": "cucumber-js features/E1-first-steps.feature",
+    "test:E1-Headed": "cucumber-js features/E1-first-steps.feature",
+    "test:E1-Headless": "PWHEADLESS=1 cucumber-js features/E1-first-steps.feature",
     "test:E1wVideo": "PWVIDEO=1 cucumber-js features/E1-first-steps.feature",
-    "test:E4": "cucumber-js features/E4-copilot.feature",
+    "test:E4-Headed": "cucumber-js features/E4-copilot.feature",
+    "test:E4-Headless": "PWHEADLESS=1 cucumber-js features/E4-copilot.feature",
     "test:E4wVideo": "PWVIDEO=1 cucumber-js features/E4-copilot.feature"
   },
   "keywords": [],

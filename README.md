@@ -264,13 +264,21 @@ npm test
 Run tests for a specific feature file with (or without) video recording:
 
 ```shell
-npm run test:E1
+npm run test:E1-Headed
+# or
+npm run test:E1-Headless
+# or
+npm run test:E1-Debug
 # or
 npm run test:E1wVideo
 # or
-npm run test:E4
+PWDEBUG=1 npx cucumber-js features/E1-first-steps.feature
 # or
-npm run test:E4wVideo
+PWHEADLESS=1 npx cucumber-js features/E1-first-steps.feature
+# or (BROWSER could be 'firefox' or 'webkit')
+BROWSER=firefox npx cucumber-js features/E1-first-steps.feature
+
+# . . . and same for other feature files (E4-copilot.feature)
 ```
 
 ## Structure of this repository
